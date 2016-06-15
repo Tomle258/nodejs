@@ -1,0 +1,27 @@
+<% if (messages && messages['error'].length > 0) { %>
+  <div class="alert alert-danger fade in" style="text-align:center">
+  <a href="#" class="close" data-dismiss="alert">&times;</a>
+  <% messages['error'].forEach(function(message) { %>
+    <%= message %>
+    <br>
+  <% }); %>
+  </div>
+<% } %>
+<% if (messages && messages['warning'].length > 0) { %>
+  <a href="#" class="close" data-dismiss="alert">&times;</a>
+  <div class="alert alert-warning" style="text-align:center">
+  <% messages['warning'].forEach(function(message) { %>
+    <%= message %>
+    <br>
+  <% }); %>
+  </div>
+<% } %>
+<% if (messages && messages['success'].length > 0) { %>
+  <a href="#" class="close" data-dismiss="alert">&times;</a>
+  <div class="alert alert-success" style="text-align:center">
+  <% messages['success'].forEach(function(message) { %>
+    <%= message %>
+    <br>
+  <% }); %>
+  </div>
+<% } %> 
